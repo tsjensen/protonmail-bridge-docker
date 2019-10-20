@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE Policy SYSTEM "http://www.debian.org/debsig/1.0/policy.dtd">
+<Policy xmlns="https://www.debian.org/debsig/1.0/">
+    <Origin Name="Proton Technologies AG" id="E2C75D68E6234B07" Description="Proton Technologies AG (ProtonMail Bridge developers) &lt;bridge@protonmail.ch&gt;"/>
+
+    <Selection>
+        <Required Type="origin" File="debsig.gpg" id="E2C75D68E6234B07"/>
+    </Selection>
+    <Verification MinOptional="0">
+        <Required Type="origin" File="debsig.gpg" id="E2C75D68E6234B07"/>
+    </Verification>
+</Policy>
