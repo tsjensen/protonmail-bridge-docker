@@ -48,6 +48,16 @@ Unless you change the port bindings, the URL for the IMAP service is `localhost:
 `localhost:25`.
 
 
+## License
+
+This Docker image description is free software under the MIT license (see [LICENSE](LICENSE) file).  
+Note that this project contains only the Dockerfile and some supplemental data. The ProtonMail Bridge application itself
+is not part of this project. Even though the build process makes a download of it for you, it is still *you* who is
+downloading and deploying the ProtonMail Bridge application. Make sure you comply with all ProtonMail's license terms.
+This project is not affiliated with ProtonMail. Any issues or concerns regarding the ProtonMail Bridge should be addressed
+to the friendly folks at ProtonMail.
+
+
 ## Credits
 
 This Docker image is inspired by previous work by [Hendrik Meyer](https://gitlab.com/T4cC0re), who came up with a
