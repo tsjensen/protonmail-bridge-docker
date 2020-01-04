@@ -1,3 +1,4 @@
 /_support/
 /credentials.txt
-*.deb
+/protonmail/
+!/protonmail/.gitkeep

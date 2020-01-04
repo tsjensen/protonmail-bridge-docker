@@ -6,13 +6,17 @@ Run [ProtonMail Bridge](https://protonmail.com/bridge/) in a Docker container.
 
 - a [ProtonMail](https://protonmail.com/) account
 - [Docker](https://www.docker.com/) (obviously)
+- The ProtonMail Bridge files for Linux. The Linux version of the ProtonMail Bridge is still in beta, so you must ask
+  ProtonMail support to send you the files by email: `bridge@protonmail.com`
 
 ## Setup
 
-This repo is a fully functional setup, which only needs to be configured. The ProtonMail Bridge application is
-downloaded as part of the Docker build.
+Steps to build the working container image:
 
-1. Enter your ProtonMail email address and password into the file *credentials.txt*.
+1. Place all the files received from ProtonMail into the *protonmail* folder, including files that you need to download,
+   if any. There should be a .deb package, some keys and policy files, about 10 files total.
+
+2. Enter your ProtonMail email address and password into the file *credentials.txt*.
    > **Note:** The file must have UNIX line endings. Keep the single quotes, so that any special characters in your
      password don't cause trouble.
 
@@ -21,7 +25,7 @@ downloaded as part of the Docker build.
        EMAIL='Your.Email@protonmail.com'
        PASSWORD='your_protonmail_password'
 
-2. Build the docker image:
+3. Build the docker image:
 
        docker build -t tsjensen/protonmail-bridge:1.2.2-1 .
 
@@ -29,6 +33,7 @@ downloaded as part of the Docker build.
    `bridgeVersion` build argument:
 
        docker build --build-arg bridgeVersion=1.2.2-1 -t tsjensen/protonmail-bridge:1.2.2-1 .
+
 
 ## Run
 
@@ -52,10 +57,8 @@ Unless you change the port bindings, the URL for the IMAP service is `localhost:
 
 This Docker image description is free software under the MIT license (see [LICENSE](LICENSE) file).  
 Note that this project contains only the Dockerfile and some supplemental data. The ProtonMail Bridge application itself
-is not part of this project. Even though the build process makes a download of it for you, it is still *you* who is
-downloading and deploying the ProtonMail Bridge application. Make sure you comply with all ProtonMail's license terms.
-This project is not affiliated with ProtonMail. Any issues or concerns regarding the ProtonMail Bridge should be addressed
-to the friendly folks at ProtonMail.
+is not part of this project. This project is not affiliated with ProtonMail. Any issues or concerns regarding the
+ProtonMail Bridge should be addressed to the friendly folks at ProtonMail.
 
 
 ## Credits

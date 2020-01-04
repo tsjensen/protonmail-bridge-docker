@@ -16,10 +16,9 @@ RUN   apt-get update -y && \
       apt-get install -y --no-install-recommends --no-install-suggests debsig-verify debian-keyring && \
       setcap 'cap_net_bind_service=+ep' /usr/bin/socat && \
       useradd --create-home --shell /bin/bash --no-user-group ${USER} && \
-      chgrp -R users /home/${USER}/ && \
-      curl -LR --output /tmp/protonmail-bridge_${bridgeVersion}_amd64.deb https://protonmail.com/download/protonmail-bridge_${bridgeVersion}_amd64.deb
+      chgrp -R users /home/${USER}/
 
-COPY  bridge.pol bridge_pubkey.gpg /tmp/
+COPY  protonmail/bridge.pol protonmail/bridge_pubkey.gpg protonmail/protonmail-bridge_${bridgeVersion}_amd64.deb /tmp/
 COPY  --chown=${USER}:users gpgparams entrypoint.sh credentials.txt /home/${USER}/
 
 RUN   chmod 755 /home/${USER}/entrypoint.sh && \
