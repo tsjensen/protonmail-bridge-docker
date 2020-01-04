@@ -1,4 +1,5 @@
 /_support/
+/coverage/
 /credentials.txt
 /protonmail/
 !/protonmail/.gitkeep
