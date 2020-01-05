@@ -2,7 +2,7 @@ FROM  debian:buster-slim
 
 LABEL maintainer="Thomas Jensen <tsjensen@users.noreply.github.com>"
 
-ARG   bridgeVersion=1.2.2-1
+ARG   bridgeVersion=1.2.3-1
 ARG   smtpPort=25
 ARG   imapPort=143
 

@@ -27,23 +27,23 @@ Steps to build the working container image:
 
 3. Build the docker image:
 
-       docker build -t tsjensen/protonmail-bridge:1.2.2-1 .
+       docker build -t tsjensen/protonmail-bridge:1.2.3-1 .
 
-   This will get you ProtonMail Bridge v1.2.2-1. If you want a different version, you can choose it via the
+   This will get you ProtonMail Bridge v1.2.3-1. If you want a different version, you can choose it via the
    `bridgeVersion` build argument:
 
-       docker build --build-arg bridgeVersion=1.2.2-1 -t tsjensen/protonmail-bridge:1.2.2-1 .
+       docker build --build-arg bridgeVersion=1.2.3-1 -t tsjensen/protonmail-bridge:1.2.3-1 .
 
 
 ## Run
 
 In order to start the Bridge, run the container like this (*without* 2-factor authentication):
 
-    docker run -p 25:25 -p 143:143 --name protonmail-bridge -d tsjensen/protonmail-bridge:1.2.2-1
+    docker run -p 25:25 -p 143:143 --name protonmail-bridge -d tsjensen/protonmail-bridge:1.2.3-1
 
 If you use 2-factor authentication with ProtonMail, you must enter the MFA code via an extra parameter:
 
-    docker run -p 25:25 -p 143:143 --name protonmail-bridge -e MFACODE=123456 -d tsjensen/protonmail-bridge:1.2.2-1
+    docker run -p 25:25 -p 143:143 --name protonmail-bridge -e MFACODE=123456 -d tsjensen/protonmail-bridge:1.2.3-1
 
 The bridge credentials for [configuring your email client](https://protonmail.com/bridge/clients) can be accessed via
 
