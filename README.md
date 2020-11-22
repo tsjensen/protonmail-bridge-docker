@@ -4,7 +4,7 @@ Run [ProtonMail Bridge](https://protonmail.com/bridge/) in a Docker container.
 
 ## Prerequisites
 
-- a [ProtonMail](https://protonmail.com/) account
+- a paid [ProtonMail](https://protonmail.com/) account
 - [Docker](https://www.docker.com/) (obviously)
 - The ProtonMail Bridge files for Linux. The Linux version of the ProtonMail Bridge is still in beta, so you must ask
   ProtonMail support to send you the files by email: `bridge@protonmail.com`
